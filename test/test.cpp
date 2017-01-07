@@ -1,7 +1,8 @@
 #include <iostream>
-#include "rsacrypto.h"
+#include "../rsacrypto.h"
 #include <gmpxx.h>
 
+using namespace std;
 
 bool CoprimeTest(){
     LargeInteger a(17);
@@ -30,7 +31,7 @@ bool Base64Test(){
 bool RSATest(){
     CryptoRSA c;
     c.GenerateKeyPair(1024);
-    std::string test_str = "aA1@# Hello World!"
+    std::string test_str = "aA1@# Hello World!";
     std::string msg(test_str);
     std::string cipher = c.Encrypt(msg);
     std::string output = c.Decrypt(cipher);
@@ -39,16 +40,16 @@ bool RSATest(){
 
 int main(){
     cout << "Coprime Test......" << flush;
-    cout << CoprimeTest() ? "Pass" : "Fail" << endl;
+    cout << (CoprimeTest() ? "Pass" : "Fail") << endl;
 
     cout << "Modular Multiplicative Inverse Test......" << flush;
-    cout << ModularMultiplicativeInverseTest() ? "Pass" : "Fail" << endl;
+    cout << (ModularMultiplicativeInverseTest() ? "Pass" : "Fail") << endl;
 
     cout << "Base64 Test......" << flush;
-    cout << Base64Test() ? "Pass" : "Fail" << endl;
+    cout << (Base64Test() ? "Pass" : "Fail") << endl;
 
     cout << "RSA Test......" << flush;
-    cout << RSATest() ? "Pass" : "Fail" << endl;
+    cout << (RSATest() ? "Pass" : "Fail") << endl;
 
 
     return 0;

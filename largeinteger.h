@@ -169,7 +169,6 @@ class LargeInteger{
             LargeInteger g;
             ExtendedGCD(a, m, x, y, g);
             if (g.Compare(1) != 0){
-                cout << "Inverse doesn't exist";
                 
                 g.Delete();
                 x.Delete();

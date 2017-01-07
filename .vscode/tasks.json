@@ -4,6 +4,6 @@
     "version": "0.1.0",
     "command": "g++",
     "isShellCommand": true,
-    "args": ["-o","rsa","main.cpp","rsacrypto.cpp","-lgmpxx","-lgmp","-std=gnu++11"],
+    "args": ["-o","run_test","test/test.cpp","rsacrypto.cpp","-lgmpxx","-lgmp","-std=gnu++11"],
     "showOutput": "always"
 }
